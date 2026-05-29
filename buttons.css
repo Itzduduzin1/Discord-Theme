@@ -1,0 +1,98 @@
+.winButtons_c38106{
+
+    display:
+    flex !important;
+
+    align-items:
+    center;
+
+    gap:
+    8px;
+
+    margin-right:
+    10px;
+}
+
+.winButton_c38106 svg{
+    display: none !important;
+}
+
+.winButton_c38106{
+
+    background:
+    transparent !important;
+
+    width:
+    18px !important;
+
+    height:
+    18px !important;
+
+    min-width:
+    18px !important;
+
+    display:
+    flex !important;
+
+    align-items:
+    center !important;
+
+    justify-content:
+    center !important;
+
+    padding:
+    0 !important;
+}
+
+.winButton_c38106::after{
+
+    content:
+    "";
+
+    width:
+    12px;
+
+    height:
+    12px;
+
+    border-radius:
+    50%;
+
+    display:
+    block;
+
+    transition:
+    0.15s ease;
+}
+
+/* close */
+
+.winButtonClose_c38106::after{
+
+    background:
+    #ff5f57 !important;
+}
+
+/* minimize */
+
+.winButtonMinMax_c38106:nth-child(1)::after{
+
+    background:
+    #febc2e !important;
+}
+
+/* maximize */
+
+.winButtonMinMax_c38106:nth-child(2)::after{
+
+    background:
+    #28c840 !important;
+}
+
+/* hover */
+
+.winButton_c38106:hover::after{
+
+    transform:
+    scale(1.08);
+}
