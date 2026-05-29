@@ -1,0 +1,480 @@
+```css
+/**
+ * @name Glasscord Midnight
+ * @author ducal
+ * @version 2.0
+ * @description Premium glassmorphism Discord theme
+ */
+
+/* ========================= */
+/* IMPORT FONT */
+/* ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ========================= */
+/* ROOT */
+/* ========================= */
+
+:root{
+
+    --glass-bg:
+    rgba(18,18,24,0.82);
+
+    --glass-bg-2:
+    rgba(24,24,32,0.72);
+
+    --glass-bg-3:
+    rgba(14,14,20,0.92);
+
+    --border:
+    rgba(255,255,255,0.05);
+
+    --hover:
+    rgba(255,255,255,0.04);
+
+    --active:
+    rgba(255,255,255,0.08);
+
+    --text-main:
+    #f2f2f2;
+
+    --text-muted:
+    #9d9dad;
+
+    --blur:
+    18px;
+
+    --radius:
+    18px;
+}
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+*{
+    font-family:
+    "Inter",
+    sans-serif !important;
+}
+
+body{
+
+    color:
+    var(--text-main);
+
+    overflow:
+    hidden;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+
+    url("https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1920&auto=format&fit=crop")
+
+    center/cover no-repeat fixed !important;
+}
+
+/* ========================= */
+/* APP */
+/* ========================= */
+
+[class*="appMount"],
+[class*="bg_"],
+[class*="layer_"]{
+
+    background:
+    transparent !important;
+}
+
+/* ========================= */
+/* SERVER LIST */
+/* ========================= */
+
+[class*="guilds"]{
+
+    background:
+    rgba(12,12,18,0.72) !important;
+
+    backdrop-filter:
+    blur(var(--blur));
+
+    -webkit-backdrop-filter:
+    blur(var(--blur));
+
+    border-right:
+    1px solid var(--border);
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+
+[class*="sidebar"]{
+
+    background:
+    var(--glass-bg) !important;
+
+    backdrop-filter:
+    blur(var(--blur));
+
+    -webkit-backdrop-filter:
+    blur(var(--blur));
+
+    border-right:
+    1px solid var(--border);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.22);
+}
+
+/* ========================= */
+/* CHANNELS */
+/* ========================= */
+
+[class*="link"]{
+
+    border-radius:
+    12px;
+
+    transition:
+    0.15s ease;
+}
+
+[class*="link"]:hover{
+
+    background:
+    var(--hover) !important;
+
+    transform:
+    translateX(2px);
+}
+
+/* selected channel */
+
+[class*="modeSelected"]{
+
+    background:
+    var(--active) !important;
+
+    border:
+    1px solid rgba(255,255,255,0.04);
+
+    box-shadow:
+    0 0 12px rgba(255,255,255,0.02);
+}
+
+/* ========================= */
+/* CHAT */
+/* ========================= */
+
+[class*="chat"],
+[class*="content"],
+[class*="container"]{
+
+    background:
+    transparent !important;
+}
+
+/* ========================= */
+/* CHAT PANEL */
+/* ========================= */
+
+[class*="chatContent"]{
+
+    background:
+    rgba(10,10,15,0.45) !important;
+
+    backdrop-filter:
+    blur(18px);
+}
+
+/* ========================= */
+/* TOP BAR */
+/* ========================= */
+
+[class*="title"]{
+
+    background:
+    rgba(15,15,20,0.55) !important;
+
+    backdrop-filter:
+    blur(18px);
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+/* ========================= */
+/* MEMBERS */
+/* ========================= */
+
+[class*="members"]{
+
+    background:
+    var(--glass-bg) !important;
+
+    backdrop-filter:
+    blur(var(--blur));
+
+    border-left:
+    1px solid var(--border);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.22);
+}
+
+/* ========================= */
+/* USER PANEL */
+/* ========================= */
+
+[class*="panels"]{
+
+    background:
+    rgba(15,15,20,0.72) !important;
+
+    backdrop-filter:
+    blur(20px);
+
+    border-top:
+    1px solid var(--border);
+}
+
+/* ========================= */
+/* MESSAGES */
+/* ========================= */
+
+[class*="message"]{
+
+    margin-top:
+    4px;
+
+    margin-bottom:
+    4px;
+
+    border-radius:
+    16px;
+
+    transition:
+    0.15s ease;
+}
+
+[class*="message"]:hover{
+
+    background:
+    rgba(255,255,255,0.03) !important;
+}
+
+/* ========================= */
+/* CHATBAR */
+/* ========================= */
+
+[class*="channelTextArea"]{
+
+    background:
+    rgba(30,30,38,0.72) !important;
+
+    border:
+    1px solid rgba(255,255,255,0.05);
+
+    border-radius:
+    var(--radius);
+
+    backdrop-filter:
+    blur(20px);
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,0.18);
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+button{
+
+    transition:
+    0.15s ease !important;
+}
+
+button:hover{
+
+    filter:
+    brightness(1.04);
+}
+
+/* ========================= */
+/* MACOS BUTTONS */
+/* ========================= */
+
+.winButtons_c38106{
+
+    display:
+    flex !important;
+
+    align-items:
+    center;
+
+    gap:
+    8px;
+
+    margin-right:
+    10px;
+}
+
+.winButton_c38106 svg{
+    display: none !important;
+}
+
+.winButton_c38106{
+
+    background:
+    transparent !important;
+
+    width:
+    18px !important;
+
+    height:
+    18px !important;
+
+    min-width:
+    18px !important;
+
+    display:
+    flex !important;
+
+    align-items:
+    center !important;
+
+    justify-content:
+    center !important;
+
+    padding:
+    0 !important;
+}
+
+.winButton_c38106::after{
+
+    content:
+    "";
+
+    width:
+    12px;
+
+    height:
+    12px;
+
+    border-radius:
+    50%;
+
+    display:
+    block;
+
+    transition:
+    0.15s ease;
+}
+
+/* close */
+
+.winButtonClose_c38106::after{
+
+    background:
+    #ff5f57 !important;
+}
+
+/* minimize */
+
+.winButtonMinMax_c38106:nth-child(1)::after{
+
+    background:
+    #febc2e !important;
+}
+
+/* maximize */
+
+.winButtonMinMax_c38106:nth-child(2)::after{
+
+    background:
+    #28c840 !important;
+}
+
+/* hover */
+
+.winButton_c38106:hover::after{
+
+    transform:
+    scale(1.08);
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar{
+    width:
+    8px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+    rgba(255,255,255,0.10);
+
+    border-radius:
+    999px;
+}
+
+/* ========================= */
+/* TEXT */
+/* ========================= */
+
+[class*="subtitle"],
+[class*="description"],
+[class*="membersGroup"]{
+
+    color:
+    var(--text-muted) !important;
+}
+
+/* ========================= */
+/* MODALS */
+/* ========================= */
+
+[class*="modal"],
+
+[class*="root"]{
+
+    backdrop-filter:
+    blur(20px);
+}
+
+/* ========================= */
+/* SETTINGS */
+/* ========================= */
+
+[class*="standardSidebarView"]{
+
+    background:
+    rgba(12,12,18,0.82) !important;
+}
+
+/* ========================= */
+/* SEARCH BAR */
+/* ========================= */
+
+[class*="searchBar"]{
+
+    background:
+    rgba(255,255,255,0.04) !important;
+
+    border:
+    1px solid rgba(255,255,255,0.04);
+
+    border-radius:
+    12px;
+}
+```
