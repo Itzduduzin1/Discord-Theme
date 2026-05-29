@@ -59,26 +59,6 @@
     sans-serif !important;
 }
 
-body{
-
-    color:
-    var(--text-main);
-
-    overflow:
-    hidden;
-
-    background:
-
-    linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.55)
-    ),
-
-    url("https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1920&auto=format&fit=crop")
-
-    center/cover no-repeat fixed !important;
-}
-
 /* ========================= */
 /* APP */
 /* ========================= */
