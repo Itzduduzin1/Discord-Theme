@@ -1,16 +1,17 @@
 .winButtons_c38106 {
     display: flex !important;
     align-items: center;
-    gap: var(--win-gap);
-    margin-right: var(--win-margin-right);
+    gap: var(--win-gap, 8px);
+    margin-right: var(--win-margin-right, 10px);
 }
 
 /* botão base */
 .winButton_c38106 {
     background: transparent !important;
-    width: var(--win-button-size) !important;
-    height: var(--win-button-size) !important;
-    min-width: var(--win-button-size) !important;
+
+    width: var(--win-button-size, 18px) !important;
+    height: var(--win-button-size, 18px) !important;
+    min-width: var(--win-button-size, 18px) !important;
 
     display: flex !important;
     align-items: center !important;
@@ -27,29 +28,32 @@
 /* bolinha */
 .winButton_c38106::after {
     content: "";
-    width: var(--win-size);
-    height: var(--win-size);
+
+    width: var(--win-size, 12px);
+    height: var(--win-size, 12px);
+
     border-radius: 50%;
     display: block;
-    transition: var(--win-transition);
+
+    transition: var(--win-transition, 0.15s ease);
 }
 
 /* CLOSE */
 .winButtonClose_c38106::after {
-    background: var(--win-close) !important;
+    background: var(--win-close, #ff5f57) !important;
 }
 
 /* MINIMIZE */
 .winButtonMinMax_c38106:nth-child(1)::after {
-    background: var(--win-min) !important;
+    background: var(--win-min, #febc2e) !important;
 }
 
 /* MAXIMIZE */
 .winButtonMinMax_c38106:nth-child(2)::after {
-    background: var(--win-max) !important;
+    background: var(--win-max, #28c840) !important;
 }
 
 /* HOVER */
 .winButton_c38106:hover::after {
-    transform: scale(var(--win-hover-scale));
+    transform: scale(var(--win-hover-scale, 1.08));
 }
