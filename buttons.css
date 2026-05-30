@@ -1,21 +1,43 @@
+/* =========================
+   DEFAULTS (fallback global)
+========================= */
+:root {
+    --win-close: #ff5f57;
+    --win-min: #febc2e;
+    --win-max: #28c840;
+
+    --win-size: 12px;
+    --win-button-size: 18px;
+    --win-gap: 8px;
+    --win-margin-right: 10px;
+
+    --win-hover-scale: 1.08;
+    --win-transition: 0.15s ease;
+}
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
 .winButtons_c38106 {
     display: flex !important;
     align-items: center;
-    gap: var(--win-gap, 8px);
-    margin-right: var(--win-margin-right, 10px);
+    gap: var(--win-gap);
+    margin-right: var(--win-margin-right);
 }
 
-/* botão base */
+/* =========================
+   BUTTON BASE
+========================= */
 .winButton_c38106 {
     background: transparent !important;
 
-    width: var(--win-button-size, 18px) !important;
-    height: var(--win-button-size, 18px) !important;
-    min-width: var(--win-button-size, 18px) !important;
+    width: var(--win-button-size);
+    height: var(--win-button-size);
+    min-width: var(--win-button-size);
 
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    align-items: center;
+    justify-content: center;
 
     padding: 0 !important;
 }
@@ -25,35 +47,36 @@
     display: none !important;
 }
 
-/* bolinha */
+/* =========================
+   DOT BASE
+========================= */
 .winButton_c38106::after {
     content: "";
-
-    width: var(--win-size, 12px);
-    height: var(--win-size, 12px);
-
+    width: var(--win-size);
+    height: var(--win-size);
     border-radius: 50%;
     display: block;
-
-    transition: var(--win-transition, 0.15s ease);
+    transition: var(--win-transition);
 }
 
-/* CLOSE */
+/* =========================
+   COLORS
+========================= */
 .winButtonClose_c38106::after {
-    background: var(--win-close, #ff5f57) !important;
+    background: var(--win-close) !important;
 }
 
-/* MINIMIZE */
 .winButtonMinMax_c38106:nth-child(1)::after {
-    background: var(--win-min, #febc2e) !important;
+    background: var(--win-min) !important;
 }
 
-/* MAXIMIZE */
 .winButtonMinMax_c38106:nth-child(2)::after {
-    background: var(--win-max, #28c840) !important;
+    background: var(--win-max) !important;
 }
 
-/* HOVER */
+/* =========================
+   HOVER
+========================= */
 .winButton_c38106:hover::after {
-    transform: scale(var(--win-hover-scale, 1.08));
+    transform: scale(var(--win-hover-scale));
 }
