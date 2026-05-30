@@ -1,0 +1,18 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999999;
+  background-image: url("https://itzduduzin1.github.io/Discord-Theme/snow.png");
+  animation: snow 10s linear infinite;
+  opacity: .5;
+}
+
+@keyframes snow {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
