@@ -1,98 +1,55 @@
-.winButtons_c38106{
-
-    display:
-    flex !important;
-
-    align-items:
-    center;
-
-    gap:
-    8px;
-
-    margin-right:
-    10px;
+.winButtons_c38106 {
+    display: flex !important;
+    align-items: center;
+    gap: var(--win-gap);
+    margin-right: var(--win-margin-right);
 }
 
-.winButton_c38106 svg{
+/* botão base */
+.winButton_c38106 {
+    background: transparent !important;
+    width: var(--win-button-size) !important;
+    height: var(--win-button-size) !important;
+    min-width: var(--win-button-size) !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+}
+
+/* remove ícone original */
+.winButton_c38106 svg {
     display: none !important;
 }
 
-.winButton_c38106{
-
-    background:
-    transparent !important;
-
-    width:
-    18px !important;
-
-    height:
-    18px !important;
-
-    min-width:
-    18px !important;
-
-    display:
-    flex !important;
-
-    align-items:
-    center !important;
-
-    justify-content:
-    center !important;
-
-    padding:
-    0 !important;
+/* bolinha */
+.winButton_c38106::after {
+    content: "";
+    width: var(--win-size);
+    height: var(--win-size);
+    border-radius: 50%;
+    display: block;
+    transition: var(--win-transition);
 }
 
-.winButton_c38106::after{
-
-    content:
-    "";
-
-    width:
-    12px;
-
-    height:
-    12px;
-
-    border-radius:
-    50%;
-
-    display:
-    block;
-
-    transition:
-    0.15s ease;
+/* CLOSE */
+.winButtonClose_c38106::after {
+    background: var(--win-close) !important;
 }
 
-/* close */
-
-.winButtonClose_c38106::after{
-
-    background:
-    #ff5f57 !important;
+/* MINIMIZE */
+.winButtonMinMax_c38106:nth-child(1)::after {
+    background: var(--win-min) !important;
 }
 
-/* minimize */
-
-.winButtonMinMax_c38106:nth-child(1)::after{
-
-    background:
-    #febc2e !important;
+/* MAXIMIZE */
+.winButtonMinMax_c38106:nth-child(2)::after {
+    background: var(--win-max) !important;
 }
 
-/* maximize */
-
-.winButtonMinMax_c38106:nth-child(2)::after{
-
-    background:
-    #28c840 !important;
-}
-
-/* hover */
-
-.winButton_c38106:hover::after{
-
-    transform:
-    scale(1.08);
+/* HOVER */
+.winButton_c38106:hover::after {
+    transform: scale(var(--win-hover-scale));
 }
